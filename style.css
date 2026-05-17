@@ -1,0 +1,156 @@
+body {
+
+  margin: 0;
+
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background-color: #f5f1ea;
+}
+
+
+/* 机全体エリア */
+#desk-container {
+
+   position: relative;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+
+/* 机画像 */
+#desk-image {
+
+  max-width: 90vw;
+
+  max-height: 90vh;
+
+  display: block;
+}
+
+/* 本クリックエリア */
+
+.book-button {
+
+  position: absolute;
+
+  width: 9%;
+
+  height: 12%;
+
+  left: 10%;
+
+  top: 39%;
+
+  cursor: pointer;
+
+  border: 0px solid red;
+}
+
+/* =========================
+   ポップアップ全体
+========================= */
+
+#popup {
+
+  position: fixed;
+
+  inset: 0;
+
+  background-color: rgba(0, 0, 0, 0.5);
+
+  display: none;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+
+/* =========================
+   ポップアップ中身
+========================= */
+
+#popup-content {
+
+  background-color: white;
+
+  padding: 30px;
+
+  border-radius: 20px;
+
+  width: 300px;
+
+  text-align: center;
+}
+
+
+/* 表紙画像 */
+
+#popup-image {
+
+  width: 100%;
+
+  border-radius: 12px;
+}
+
+/* 本クリックエリア */
+
+.book02 {
+
+  position: absolute;
+
+  width: 9%;
+
+  height: 12%;
+
+  left: 22%;
+
+  top: 39%;
+
+  cursor: pointer;
+
+  border: 0px solid red;
+}
+
+.book03 {
+
+  position: absolute;
+
+  width: 7%;
+
+  height: 10%;
+
+  left: 55%;
+
+  top: 41%;
+
+  cursor: pointer;
+
+  border: 0px solid red;
+}
+
+.book04 {
+
+  position: absolute;
+
+  width: 10%;
+
+  height: 13%;
+
+  left: 77%;
+
+  top: 36%;
+
+  cursor: pointer;
+
+  border: 0px solid red;
+}
+
