@@ -110,15 +110,10 @@ lang="ja" は
 </div>
 
 <div
-  class="book-button book04 disabled"
-
-  data-title="ツナカワ旅行記　〜ロマ佐賀2026〜"
-
-  data-description="3月に行ってきたツナカワ旅行まとめ"
-
-  data-image="images/book-cover04.jpg"
-
-  data-link="https://sizu.me/kawasemi120/posts/9ni6acuaszn6">
+  class="book-button book04 clap-button"
+  role="button"
+  tabindex="0"
+  aria-label="拍手箱を開く">
 </div>
     
   </div>
@@ -166,15 +161,28 @@ lang="ja" は
 </div>
 
 
+  <div id="clap-modal" class="clap-modal" hidden>
+  <div class="clap-overlay"></div>
 
+  <div class="clap-window"
+       role="dialog"
+       aria-modal="true"
+       aria-label="拍手箱">
 
+    <button id="clap-close" type="button" aria-label="閉じる">
+      ×
+    </button>
 
-  
+    <iframe
+      src="clap/index.html"
+      title="ちいさな拍手箱">
+    </iframe>
 
+  </div>
+</div>
 
-  <!-- JavaScript読み込み -->
-
-  <script src="script.js"></script>
+<!-- JavaScriptは最後に読み込む -->
+<script src="script.js"></script>
 
 </body>
 </html>

@@ -1,7 +1,7 @@
-// すべての本ボタン取得
-
-const bookButtons = document.querySelectorAll(".book-button");
-
+// 拍手箱と無効化した本を除外
+const bookButtons = document.querySelectorAll(
+  ".book-button:not(.clap-button):not(.disabled)"
+);
 
 // popup取得
 
@@ -104,4 +104,37 @@ bird.addEventListener("mouseenter", () => {
 
   }, 1000);
 
+});
+
+const clapButton = document.querySelector(".clap-button");
+const clapModal = document.getElementById("clap-modal");
+const clapClose = document.getElementById("clap-close");
+const clapOverlay = document.querySelector(".clap-overlay");
+
+function openClap() {
+  clapModal.hidden = false;
+  clapClose.focus();
+}
+
+function closeClap() {
+  clapModal.hidden = true;
+  clapButton.focus();
+}
+
+clapButton.addEventListener("click", openClap);
+
+clapButton.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" || e.key === " ") {
+    e.preventDefault();
+    openClap();
+  }
+});
+
+clapClose.addEventListener("click", closeClap);
+clapOverlay.addEventListener("click", closeClap);
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && !clapModal.hidden) {
+    closeClap();
+  }
 });
