@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>拍手&一言コメントBOX</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="card">
+    <div class="bird" aria-hidden="true">🐦</div>
+    <h1>拍手&一言コメントBOX</h1>
+    <p>気がついてくれてありがとう！<br>気軽にポチポチしてください</p>
+
+    <form id="clap-form" method="POST" target="receiver" class="section">
+      <input type="hidden" name="type" value="clap">
+      <button id="clap-button" type="submit">♡ 拍手を送る</button>
+    </form>
+    <p id="clap-status" class="status" role="status" aria-live="polite"></p>
+
+    <div class="divider"></div>
+    <form id="message-form" method="POST" target="receiver" class="section">
+      <input type="hidden" name="type" value="message">
+      <label for="message">ひとことメッセージ（任意記入・匿名OK）</label>
+      <textarea id="message" name="message" maxlength="500" rows="4" placeholder="よかったら感想をどうぞ" required></textarea>
+      <button id="message-button" type="submit">ひとこと送る ✉</button>
+    </form>
+    <p id="message-status" class="status" role="status" aria-live="polite"></p>
+    <small>通信状況などにより、うまく届かない場合があります。ご了承ください。</small>
+  </main>
+  <!-- クロスオリジンでも送信可能な通常のHTMLフォーム。返却内容は読み取れません。 -->
+  <iframe name="receiver" title="送信先" hidden></iframe>
+</body>
+</html>
