@@ -68,3 +68,40 @@ closeButton.addEventListener("click", () => {
   popup.style.display = "none";
 
 });
+
+const bird = document.querySelector("#bird-hitbox");
+const birdImage = document.querySelector("#bird-image");
+const birdMessage = document.querySelector("#bird-message");
+
+bird.addEventListener("mouseenter", () => {
+
+   // 鳥ぴょこ
+
+  birdImage.style.transform = "scale(1.08)";
+
+  // 一旦消す
+
+  birdMessage.style.display = "none";
+
+
+  // 再描画（おまじない）
+
+  void birdMessage.offsetWidth;
+
+
+  // 表示
+
+  birdMessage.style.display = "block";
+
+
+  // 1秒後戻す
+
+  setTimeout(() => {
+
+    birdMessage.style.display = "none";
+
+    birdImage.style.transform = "scale(1)";
+
+  }, 1000);
+
+});

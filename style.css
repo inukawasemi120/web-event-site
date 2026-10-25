@@ -19,9 +19,6 @@ body {
 
    position: relative;
 
-  display: flex;
-
-  justify-content: center;
 }
 
 
@@ -34,6 +31,52 @@ body {
 
   display: block;
 }
+#bird-image {
+
+  position: absolute;
+
+  z-index: 2;
+
+  width: 35%;
+
+  left: 46%;
+
+  top: 13.6%;
+
+  transition: 0.2s;
+}
+
+#bird-hitbox {
+
+  position: absolute;
+
+  z-index: 3;
+
+  left: 52%;
+
+  top: 16%;
+
+  width: 12%;
+
+  height: 13%;
+  
+  cursor: pointer;
+
+  border: 0px solid red;
+}
+
+#bird-message {
+
+  position: absolute;
+
+  z-index: 4;
+
+  left: 50%;
+
+  top: 8%;
+
+  display: none;
+}
 
 /* 本クリックエリア */
 
@@ -45,9 +88,9 @@ body {
 
   height: 12%;
 
-  left: 10%;
+  left: 20.5%;
 
-  top: 39%;
+  top: 35%;
 
   cursor: pointer;
 
@@ -63,6 +106,8 @@ body {
   position: fixed;
 
   inset: 0;
+
+  z-index: 9999;
 
   background-color: rgba(0, 0, 0, 0.5);
 
@@ -111,7 +156,7 @@ body {
 
   height: 12%;
 
-  left: 22%;
+  left: 50%;
 
   top: 39%;
 
@@ -128,7 +173,7 @@ body {
 
   height: 10%;
 
-  left: 55%;
+  left: 65%;
 
   top: 41%;
 
@@ -154,3 +199,8 @@ body {
   border: 0px solid red;
 }
 
+/* 未公開の本はクリックできないようにする */
+.book-button.disabled {
+  pointer-events: none;
+  cursor: default;
+}
